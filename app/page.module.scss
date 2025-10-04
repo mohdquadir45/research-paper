@@ -1,0 +1,75 @@
+.container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  color: #d32f2f;
+  text-align: center;
+
+  p {
+    margin: 8px 0;
+  }
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.noResults {
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.skeletonSearch {
+  height: 48px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeletonSort {
+  height: 40px;
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

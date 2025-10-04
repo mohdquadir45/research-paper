@@ -1,0 +1,141 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 32px;
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #666;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.modalHeader {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.modalImage {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d527c;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.modalSubtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modalSection {
+  h3 {
+    font-size: 1.1rem;
+    color: #2d527c;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 8px 0;
+    color: #313a42;
+    line-height: 1.6;
+
+    strong {
+      color: #2d527c;
+      margin-right: 8px;
+    }
+  }
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #2476c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #1d5fa3;
+  }
+
+  &--download {
+    background-color: #4caf50;
+
+    &:hover {
+      background-color: #388e3c;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modalHeader {
+    flex-direction: column;
+  }
+
+  .modalImage {
+    width: 100px;
+    height: 133px;
+  }
+
+  .modalContent {
+    padding: 24px;
+  }
+}

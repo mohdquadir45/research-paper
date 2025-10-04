@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton {
+  flex: 1 1 calc(33.33% - $spacing-2xl);
+  max-width: calc(33.33% - $spacing-2xl);
+  box-sizing: border-box;
+  margin: $spacing-xl 0 0 0;
+  display: flex;
+  background: $background-secondary;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+  padding: 18px $spacing-xl;
+
+  &__imageWrap {
+    position: relative;
+    margin-right: $spacing-2xl;
+    min-width: 90px;
+  }
+
+  &__image {
+    width: 80px;
+    height: 105px;
+    border-radius: $border-radius-sm;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  &__impact {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    width: 60px;
+    height: 28px;
+    border-radius: $border-radius-sm;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &__line {
+    height: 16px;
+    border-radius: $border-radius-sm;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+
+    &--title {
+      height: 20px;
+      width: 85%;
+    }
+
+    &--short {
+      width: 60%;
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: $border-color;
+    margin: 4px 0;
+  }
+
+  &__button {
+    margin-top: auto;
+    height: 40px;
+    border-radius: $border-radius-md;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .skeleton {
+    flex: 1 1 calc(50% - $spacing-2xl);
+    max-width: calc(50% - $spacing-2xl);
+  }
+}

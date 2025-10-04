@@ -1,0 +1,36 @@
+.sortControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  &__label {
+    font-weight: 500;
+    color: #313a42;
+  }
+
+  &__button {
+    padding: 8px 16px;
+    border: 1px solid #dae0e6;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #f7fbfe;
+      border-color: #2476c7;
+    }
+
+    &--active {
+      background-color: #2476c7;
+      color: white;
+      border-color: #2476c7;
+
+      &:hover {
+        background-color: #1d5fa3;
+      }
+    }
+  }
+}

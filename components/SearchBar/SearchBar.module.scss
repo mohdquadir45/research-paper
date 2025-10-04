@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.searchBar {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-2xl;
+  width: 100%;
+  max-width: 600px;
+
+  &__input {
+    flex: 1;
+    padding: $spacing-md $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    outline: none;
+    transition: border-color $transition-fast;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &::placeholder {
+      color: $text-secondary;
+    }
+  }
+
+  &__select {
+    padding: $spacing-md $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    background-color: $background-primary;
+    cursor: pointer;
+    outline: none;
+    transition: border-color $transition-fast;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .searchBar {
+    flex-direction: column;
+
+    &__select {
+      width: 100%;
+    }
+  }
+}
