@@ -57,7 +57,7 @@ export default function Home() {
   }, []);
 
   const filteredAndSortedPapers = useMemo(() => {
-    // Filter papers using debounced search term
+    
     let result = papers;
 
     if (debouncedSearchTerm) {
@@ -77,7 +77,7 @@ export default function Home() {
       });
     }
 
-    // Sort papers
+    
     const sorted = [...result].sort((a, b) => {
       let aValue, bValue;
 
@@ -113,7 +113,7 @@ export default function Home() {
   const handleSortChange = (field, order) => {
     setSortBy(field);
     setSortOrder(order);
-    setCurrentPage(1); // Reset to first page when sorting changes
+    setCurrentPage(1); 
   };
 
   
