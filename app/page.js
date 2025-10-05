@@ -36,7 +36,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const itemsPerPage = 12;
 
-  // Debounce search term
+  
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export default function Home() {
     setCurrentPage(1); // Reset to first page when sorting changes
   };
 
-  // Paginate papers
+  
   const paginatedPapers = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -130,7 +130,7 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Reset to page 1 when search changes
+ 
   useEffect(() => {
     setCurrentPage(1);
   }, [debouncedSearchTerm, searchCategory]);
